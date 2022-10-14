@@ -17,9 +17,12 @@ def is_mel(name, email):
 
     >>> is_mel('jane', 'jane@jane.com')
     False
+
+    >>> is_mel("MEL", "any@email.com")
+    True
     """
 
-    return name == "Mel Melitpolski" or email == "mel@ubermelon.com"
+    return name.lower()[:3] == "mel" or email.lower() == "mel@ubermelon.com"
 
 
 treats = [
